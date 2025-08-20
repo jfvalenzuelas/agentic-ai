@@ -41,6 +41,8 @@ Remembers everything across all the nodes.
 
 ## LangChain vs LangGraph
 
+### Features
+
 |**Feature**                 |**LangChain**   |**LangGraph**   |
 |------------------------|---|---|
 |**Type**                    |  LLM orchestration framework based on chains and agents. |AI agent orchestration framework based on stateful graphs.   |
@@ -48,6 +50,8 @@ Remembers everything across all the nodes.
 |**State Management**       | Implicit/pass-through data. Chains carry inputs forward, but long-term state is limited by default  | Explicit global state ("memory bank") that all agents access. State is persistently stored and updated at each step.  |
 |**Task Complexity**      |Best for simple to medium tasks: chatbots, RAG pipelines, sequential reasoning. | Designed for complex, multi-step tasks and workflows that evolve over time (for example, multi-agent assistants).  |
 |**Agents and Collaboration**|Typically single-agent or linear chain; agents operate independently without inter-communication.  | Multi-agent. Agents (nodes) can call each other using the graph, share memory, or be arranged hierarchically.  |
+
+### LangChain or LangGraph? When to use which
 
 | Use Case | Use LangChain When... | Use LangGraph When... |
 | :--- | :--- | :--- |
@@ -57,4 +61,3 @@ Remembers everything across all the nodes.
 | **Interaction Style** | Simple LLM tool use (for example, retrieval, transformation, response). | Multi-turn or human-in-the-loop interactions requiring persistent state and coordination. |
 | **System Design** | Linear pipelines such as document Q&A, summarization, or format conversion. | Multi-agent architectures, process automation, or workflows with retries, dependencies, or approvals. |
 | **Team Collaboration** | Individual developer exploring LLM capabilities quickly. | Teams designing modular, orchestrated systems with accountability and version control. |
-
